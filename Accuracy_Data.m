@@ -10,13 +10,15 @@
 % Case eight: Large radius, medium overlap
 % Case nine: Large radius, large overlap
 
-dummyVar = linspace(100, 0, 20);
+dummyVar = linspace(100, 0, 180);
 dummyVar = dummyVar';
 %% Collective Data
 
 x1 = 1:9; % 9 types of trials, 3 overlap x 3 eccentricities
 y1 = dummyVar(1:180); % fixation data
 y2 = dummyVar(1:180); % free viewing data
+
+
 
 figure(1);
 xlabel("Trial Type")
@@ -53,7 +55,7 @@ y4 = flip(dummyVar);
 
 figure(2);
 xlabel("Overlap Size")
-ylabel("Accuracy")
+ylabel("Percent COrrect")
 title('Overlap and Accuracy')
 hold on
 plot(x2, y3, 'o');
@@ -72,7 +74,7 @@ y6 = flip(dummyVar);
 
 figure(3);
 xlabel("Eccentricity (Radians)")
-ylabel("Accuracy")
+ylabel("Percent Correct")
 title('Eccentricity and Accuracy');
 hold on
 plot(x3, y5, 'o');
