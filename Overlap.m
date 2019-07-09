@@ -60,28 +60,28 @@ LRadLOLFV = table2array(LRadLOLFV);
 for i = 1:19
     for j = 1:3
         SRadSOLFixRel(i, j) = SRadSOLFix(i,j) - SRadSOLFix(i, j+6);
-        SSFix(i, j) = SRadSOLFix(i,j) - SRadSOLFix(i, j+3);
+        SSFix(i, j) = SRadSOLFix(i,j+3) - SRadSOLFix(i, j+6);
     end
 end
 
 for i = 1:20
     for j = 1:3
         SRadMOLFixRel(i, j) = SRadMOLFix(i,j) - SRadMOLFix(i, j+6);
-        SMFix(i,j) = SRadMOLFix(i, j) - SRadMOLFix(i, j+3);
+        SMFix(i,j) = SRadMOLFix(i, j+3) - SRadMOLFix(i, j+6);
         SRadLOLFixRel(i, j) = SRadLOLFix(i,j) - SRadLOLFix(i, j+6);
-        SLFix(i, j) = SRadLOLFix(i, j) - SRadLOLFix(i, j+3);
+        SLFix(i, j) = SRadLOLFix(i, j+3) - SRadLOLFix(i, j+6);
         MRadSOLFixRel(i, j) = MRadSOLFix(i,j) - MRadSOLFix(i, j+6);
-        MSFix(i, j) = MRadSOLFix(i, j) - MRadSOLFix(i, j+3)
+        MSFix(i, j) = MRadSOLFix(i, j+3) - MRadSOLFix(i, j+6);
         MRadMOLFixRel(i, j) = MRadMOLFix(i,j) - MRadMOLFix(i, j+6);
-        MMFix(i, j) = MRadMOLFix(i,j) - MRadMOLFix(i, j+3);
+        MMFix(i, j) = MRadMOLFix(i,j+3) - MRadMOLFix(i, j+6);
         MRadLOLFixRel(i, j) = MRadLOLFix(i,j) - MRadLOLFix(i, j+6);
-        MLFix(i, j) = MRadLOLFix(i,j) - MRadLOLFix(i, j+3);
+        MLFix(i, j) = MRadLOLFix(i,j+3) - MRadLOLFix(i, j+6);
         LRadSOLFixRel(i, j) = LRadSOLFix(i,j) - LRadSOLFix(i, j+6);
-        LSFix(i, j) = LRadSOLFix(i,j) - LRadSOLFix(i, j+3);
+        LSFix(i, j) = LRadSOLFix(i,j+3) - LRadSOLFix(i, j+6);
         LRadMOLFixRel(i, j) = LRadMOLFix(i,j) - LRadMOLFix(i, j+6);
-        LMFix(i, j) = LRadMOLFix(i,j) - LRadMOLFix(i, j+3);
+        LMFix(i, j) = LRadMOLFix(i,j+3) - LRadMOLFix(i, j+6);
         LRadLOLFixRel(i, j) = LRadLOLFix(i,j) - LRadLOLFix(i, j+6);
-        LLFix(i, j) = LRadLOLFix(i,j) - LRadLOLFix(i, j+3);
+        LLFix(i, j) = LRadLOLFix(i,j+3) - LRadLOLFix(i, j+6);
     end
 end
 
@@ -89,44 +89,59 @@ end
 for i = 1:19
     for j = 1:3
         SRadSOLFVRel(i, j) = SRadSOLFV(i,j) - SRadSOLFV(i, j+6);
-        SSFV(i, j) = SRadSOLFV(i,j) - SRadSOLFV(i, j+3);
+        SSFV(i, j) = SRadSOLFV(i,j+3) - SRadSOLFV(i, j+6);
     end
 end
 
 for i = 1:20
     for j = 1:3
         SRadMOLFVRel(i, j) = SRadMOLFV(i,j) - SRadMOLFV(i, j+6);
-        SMFV(i,j) = SRadMOLFV(i, j) - SRadMOLFV(i, j+3);
+        SMFV(i,j) = SRadMOLFV(i, j+3) - SRadMOLFV(i, j+6);
+        
         SRadLOLFVRel(i, j) = SRadLOLFV(i,j) - SRadLOLFV(i, j+6);
-        SLFV(i, j) = SRadLOLFV(i, j) - SRadLOLFV(i, j+3);
+        SLFV(i, j) = SRadLOLFV(i, j+3) - SRadLOLFV(i, j+6);
+        
         MRadSOLFVRel(i, j) = MRadSOLFV(i,j) - MRadSOLFV(i, j+6);
-        MSFV(i, j) = MRadSOLFV(i, j) - MRadSOLFV(i, j+3)
+        MSFV(i, j) = MRadSOLFV(i, j+3) - MRadSOLFV(i, j+6);
+        
         MRadMOLFVRel(i, j) = MRadMOLFV(i,j) - MRadMOLFV(i, j+6);
-        MMFV(i, j) = MRadMOLFV(i,j) - MRadMOLFV(i, j+3);
+        MMFV(i, j) = MRadMOLFV(i,j+3) - MRadMOLFV(i, j+6);
+        
         MRadLOLFVRel(i, j) = MRadLOLFV(i,j) - MRadLOLFV(i, j+6);
-        MLFV(i, j) = MRadLOLFV(i,j) - MRadLOLFV(i, j+3);
+        MLFV(i, j) = MRadLOLFV(i,j+3) - MRadLOLFV(i, j+6);
+        
         LRadSOLFVRel(i, j) = LRadSOLFV(i,j) - LRadSOLFV(i, j+6);
-        LSFV(i, j) = LRadSOLFV(i,j) - LRadSOLFV(i, j+3);
+        LSFV(i, j) = LRadSOLFV(i,j+3) - LRadSOLFV(i, j+6);
+        
         LRadMOLFVRel(i, j) = LRadMOLFV(i,j) - LRadMOLFV(i, j+6);
-        LMFV(i, j) = LRadMOLFV(i,j) - LRadMOLFV(i, j+3);
+        LMFV(i, j) = LRadMOLFV(i,j+3) - LRadMOLFV(i, j+6);
+        
         LRadLOLFVRel(i, j) = LRadLOLFV(i,j) - LRadLOLFV(i, j+6);
-        LLFV(i, j) = LRadLOLFV(i,j) - LRadLOLFV(i, j+3);
+        LLFV(i, j) = LRadLOLFV(i,j+3) - LRadLOLFV(i, j+6);
+        
         SRadMOLFVRel(i, j) = SRadMOLFV(i,j) - SRadMOLFV(i, j+6);
-        SMFV(i,j) = SRadMOLFV(i, j) - SRadMOLFV(i, j+3);
+        SMFV(i,j) = SRadMOLFV(i, j+3) - SRadMOLFV(i, j+6);
+        
         SRadLOLFVRel(i, j) = SRadLOLFV(i,j) - SRadLOLFV(i, j+6);
-        SLFV(i, j) = SRadLOLFV(i, j) - SRadLOLFV(i, j+3);
+        SLFV(i, j) = SRadLOLFV(i, j+3) - SRadLOLFV(i, j+6);
+        
         MRadSOLFVRel(i, j) = MRadSOLFV(i,j) - MRadSOLFV(i, j+6);
-        MSFV(i, j) = MRadSOLFV(i, j) - MRadSOLFV(i, j+3)
+        MSFV(i, j) = MRadSOLFV(i, j+3) - MRadSOLFV(i, j+6);
+        
         MRadMOLFVRel(i, j) = MRadMOLFV(i,j) - MRadMOLFV(i, j+6);
-        MMFV(i, j) = MRadMOLFV(i,j) - MRadMOLFV(i, j+3);
+        MMFV(i, j) = MRadMOLFV(i,j+3) - MRadMOLFV(i, j+6);
+        
         MRadLOLFVRel(i, j) = MRadLOLFV(i,j) - MRadLOLFV(i, j+6);
-        MLFV(i, j) = MRadLOLFV(i,j) - MRadLOLFV(i, j+3);
+        MLFV(i, j) = MRadLOLFV(i,j+3) - MRadLOLFV(i, j+6);
+        
         LRadSOLFVRel(i, j) = LRadSOLFV(i,j) - LRadSOLFV(i, j+6);
-        LSFV(i, j) = LRadSOLFV(i,j) - LRadSOLFV(i, j+3);
+        LSFV(i, j) = LRadSOLFV(i,j+3) - LRadSOLFV(i, j+6);
+        
         LRadMOLFVRel(i, j) = LRadMOLFV(i,j) - LRadMOLFV(i, j+6);
-        LMFV(i, j) = LRadMOLFV(i,j) - LRadMOLFV(i, j+3);
+        LMFV(i, j) = LRadMOLFV(i,j+3) - LRadMOLFV(i, j+6);
+        
         LRadLOLFVRel(i, j) = LRadLOLFV(i,j) - LRadLOLFV(i, j+6);
-        LLFV(i, j) = LRadLOLFV(i,j) - LRadLOLFV(i, j+3);
+        LLFV(i, j) = LRadLOLFV(i,j+3) - LRadLOLFV(i, j+6);
     end
 end
 
@@ -167,99 +182,107 @@ figure(5);
 scatter3(SOLFixlist(:, 1), SOLFixlist(:, 2), SOLFixlist(:, 3), 'r', 'filled'); hold on;
 scatter3(MOLFixlist(:, 1), MOLFixlist(:, 2), MOLFixlist(:, 3), 'g', 'filled');
 scatter3(LOLFixlist(:, 1), LOLFixlist(:, 2), LOLFixlist(:, 3), 'b', 'filled'); 
+title("Fixation");
 scatter3(x, y, z, 'filled', 'd'); hold off;
 
 figure(6);
 scatter3(SOLFVlist(:, 1), SOLFVlist(:, 2), SOLFVlist(:, 3), 'r', 'filled'); hold on;
 scatter3(MOLFVlist(:, 1), MOLFVlist(:, 2), MOLFVlist(:, 3), 'g', 'filled');
 scatter3(LOLFVlist(:, 1), LOLFVlist(:, 2), LOLFVlist(:, 3), 'b', 'filled'); 
+title("Free Viewing");
 scatter3(x, y, z, 'filled', 'd'); hold off;
 
-%% Differences
+
+%% Calculating Ratios
 for i = 1:19
     for j = 1:3
-        SradSOLFixDiff(i, j) = sqrt((SRadSOLFixRel(i,j))^2);
-        SradSOLFVDiff(i, j) = sqrt((SRadSOLFVRel(i, j))^2);
+    SSFixRatio(i, j) = abs(SRadSOLFixRel(i, j))/abs(SSFix(i, j));
+    SSFVRatio(i, j) = abs(SRadSOLFVRel(i, j))/abs(SSFV(i, j));
     end
 end
 
 for i = 1:20
     for j = 1:3
-        SradMOLFixDiff(i, j) = sqrt((SRadMOLFixRel(i,j))^2);
-        SradMOLFVDiff(i, j) = sqrt((SRadMOLFVRel(i, j))^2);
+        SMFixRatio(i, j) = abs(SRadMOLFixRel(i, j))/abs(SMFix(i, j));
+        SMFVRatio(i, j) = abs(SRadMOLFVRel(i, j))/abs(SMFV(i, j));
         
-        SradLOLFixDiff(i, j) = sqrt((SRadLOLFixRel(i,j))^2);
-        SradLOLFVDiff(i, j) = sqrt((SRadLOLFVRel(i, j))^2);
+        SLFixRatio(i, j) = abs(SRadLOLFixRel(i, j))/abs(SLFix(i, j));
+        SLFVRatio(i, j) = abs(SRadLOLFVRel(i, j))/abs(SLFV(i, j));
         
-        MradSOLFixDiff(i, j) = sqrt((MRadSOLFixRel(i,j))^2);
-        MradSOLFVDiff(i, j) = sqrt((MRadSOLFVRel(i, j))^2);
         
-        MradMOLFixDiff(i, j) = sqrt((MRadMOLFixRel(i,j))^2);
-        MradMOLFVDiff(i, j) = sqrt((MRadMOLFVRel(i, j))^2);
+        MSFixRatio(i, j) = abs(MRadSOLFixRel(i, j))/abs(MSFix(i, j));
+        MSFVRatio(i, j) = abs(MRadSOLFVRel(i, j))/abs(MSFV(i, j));
         
-        MradLOLFixDiff(i, j) = sqrt((MRadLOLFixRel(i,j))^2);
-        MradLOLFVDiff(i, j) = sqrt((MRadLOLFVRel(i, j))^2);
+        MMFixRatio(i, j) = abs(MRadMOLFixRel(i, j))/abs(MMFix(i, j));
+        MMFVRatio(i, j) = abs(MRadMOLFVRel(i, j))/abs(MMFV(i, j));
         
-        LradSOLFixDiff(i, j) = sqrt((LRadSOLFixRel(i,j))^2);
-        LradSOLFVDiff(i, j) = sqrt((LRadSOLFVRel(i, j))^2);
+        MLFixRatio(i, j) = abs(MRadLOLFixRel(i, j))/abs(MLFix(i, j));
+        MLFVRatio(i, j) = abs(MRadLOLFVRel(i, j))/abs(MLFV(i, j));
         
-        LradMOLFixDiff(i, j) = sqrt((LRadMOLFixRel(i,j))^2);
-        LradMOLFVDiff(i, j) = sqrt((LRadMOLFVRel(i, j))^2);
         
-        LradLOLFixDiff(i, j) = sqrt((LRadLOLFixRel(i,j))^2);
-        LradLOLFVDiff(i, j) = sqrt((LRadLOLFVRel(i, j))^2);
+        LSFixRatio(i, j) = abs(LRadSOLFixRel(i, j))/abs(LSFix(i, j));
+        LSFVRatio(i, j) = abs(LRadSOLFVRel(i, j))/abs(LSFV(i, j));
+        
+        LMFixRatio(i, j) = abs(LRadMOLFixRel(i, j))/abs(LMFix(i, j));
+        LMFVRatio(i, j) = abs(LRadMOLFVRel(i, j))/abs(LMFV(i, j));
+        
+        LLFixRatio(i, j) = abs(LRadLOLFixRel(i, j))/abs(LLFix(i, j));
+        LLFVRatio(i, j) = abs(LRadLOLFVRel(i, j))/abs(LLFV(i, j));
     end
 end
 
-%% Average Differences over Overlap
-for i = 1:3
-    % Average of each type
-    SSFixAvg(i) = (sum(SradSOLFixDiff(1:19, i)))/19;
-    SSFVAvg(i) = (sum(SradSOLFVDiff(1:19, i)))/19;
+%% Lists of Ratios
+SFixRatioList(:, 1) = [SSFixRatio(:, 1); MSFixRatio(:, 1); LSFixRatio(:, 1)];
+SFixRatioList(:, 2) = [SSFixRatio(:, 3); MSFixRatio(:, 3); LSFixRatio(:, 3)];
+
+MFixRatioList(:, 1) = [SMFixRatio(:, 1); MMFixRatio(:, 1); LMFixRatio(:, 1)];
+MFixRatioList(:, 2) = [SMFixRatio(:, 3); MMFixRatio(:, 3); LMFixRatio(:, 3)];
+
+LFixRatioList(:, 1) = [SLFixRatio(:, 1); MLFixRatio(:, 1); LLFixRatio(:, 1)];
+LFixRatioList(:, 2) = [SLFixRatio(:, 3); MLFixRatio(:, 3); LLFixRatio(:, 3)];
+
+SFVRatioList(:, 1) = [SSFVRatio(:, 1); MSFVRatio(:, 1); LSFVRatio(:, 1)];
+SFVRatioList(:, 2) = [SSFVRatio(:, 3); MSFVRatio(:, 3); LSFVRatio(:, 3)];
+
+MFVRatioList(:, 1) = [SMFVRatio(:, 1); MMFVRatio(:, 1); LMFVRatio(:, 1)];
+MFVRatioList(:, 2) = [SMFVRatio(:, 3); MMFVRatio(:, 3); LMFVRatio(:, 3)];
+
+LFVRatioList(:, 1) = [SLFVRatio(:, 1); MLFVRatio(:, 1); LLFVRatio(:, 1)];
+LFVRatioList(:, 2) = [SLFVRatio(:, 3); MLFVRatio(:, 3); LLFVRatio(:, 3)];
+
+%% Averages of Ratios
+for i = 1:2
+    SFixRatioMean(i) = mean(SFixRatioList(:, i));
+    SFixstd(i) = std(SFixRatioList(:, i));
+    SFVRatioMean(i) = mean(SFVRatioList(:, i));
+    SFVstd(i) = std(SFVRatioList(:, i));
     
-    SMFixAvg(i) = (sum(SradMOLFixDiff(1:20, i)))/20;
-    SMFVAvg(i) = (sum(SradMOLFVDiff(1:20, i)))/20;
+    MFixRatioMean(i) = mean(MFixRatioList(:, i));
+    MFixstd = std(MFixRatioList(:, i));
+    MFVRatioMean(i) = mean([MFVRatioList(1:28, i); MFVRatioList(30:59, i)]);
+    MFVstd = std([MFVRatioList(1:28, i); MFVRatioList(30:59, i)]);
     
-    SLFixAvg(i) = (sum(SradLOLFixDiff(1:20, i)))/20;
-    SLFVAvg(i) = (sum(SradLOLFVDiff(1:20, i)))/20;
-    
-    MSFixAvg(i) = (sum(MradSOLFixDiff(1:20, i)))/20;
-    MSFVAvg(i) = (sum(MradSOLFVDiff(1:20, i)))/20;
-    
-    MMFixAvg(i) = (sum(MradMOLFixDiff(1:20, i)))/20;
-    MMFVAvg(i) = (sum(MradMOLFVDiff(1:20, i)))/20;
-    
-    MLFixAvg(i) = (sum(MradLOLFixDiff(1:20, i)))/20;
-    MLFVAvg(i) = (sum(MradLOLFVDiff(1:20, i)))/20;
-    
-    LSFixAvg(i) = (sum(LradSOLFixDiff(1:20, i)))/20;
-    LSFVAvg(i) = (sum(LradSOLFVDiff(1:20, i)))/20;
-    
-    LMFixAvg(i) = (sum(LradMOLFixDiff(1:20, i)))/20;
-    LMFVAvg(i) = (sum(LradMOLFVDiff(1:20, i)))/20;
-    
-    LLFixAvg(i) = (sum(LradLOLFixDiff(1:20, i)))/20;
-    LLFVAvg(i) = (sum(LradLOLFixDiff(1:20, i)))/20;
-    
-    % Average by overlap and gaze condition
-    SFixAvg(i) = (SSFixAvg(i) + MSFixAvg(i) + LSFixAvg(i))/3;
-    SFVAvg(i) = (SSFVAvg(i) + MSFVAvg(i) + LSFVAvg(i))/3;
-    
-    MFixAvg(i) = (SMFixAvg(i) + MMFixAvg(i) + LMFixAvg(i))/3;
-    MFVAvg(i) = (SMFVAvg(i) + MMFVAvg(i) + LMFVAvg(i))/3;
-    
-    LFixAvg(i) = (SLFixAvg(i) + MLFixAvg(i) + LLFixAvg(i))/3;
-    LFVAvg(i) = (SLFVAvg(i) + MLFVAvg(i) + LLFVAvg(i))/3;
+    LFixRatioMean(i) = mean(LFixRatioList(:, i));
+    LFixstd = std(LFixRatioList(:, i));
+    LFVRatioMean(i) = mean(LFVRatioList(:, i));
+    LFVstd = std(LFVRatioList(:, i));
 end
 
-% Fixation Matrices
-SFixMat = [SSFixAvg ; MSFixAvg ; LSFixAvg];
-MFixMat = [SMFixAvg ; MMFixAvg ; LMFixAvg];
-LFixMat = [SLFixAvg ; MLFixAvg ; LLFixAvg];
+SFixRatioMean = mean(SFixRatioMean);
+SFixstd = mean(SFixstd);
+SFVRatioMean = mean(SFVRatioMean);
+SFVstd = mean(SFVstd);
 
-% Free Viewing Matrices
-SFVMat = [SSFVAvg ; MSFVAvg ; LSFVAvg];
-MFVMat = [SMFVAvg ; MMFVAvg ; LMFVAvg];
-LFVMat = [SLFVAvg ; MLFVAvg ; LLFVAvg];
+MFixRatioMean = mean(MFixRatioMean);
+MFixstd = mean(MFixstd);
+MFVRatioMean = mean(MFVRatioMean);
+MFVstd = mean(MFVstd);
 
-%% plotting averages
+LFixRatioMean = mean(LFixRatioMean);
+LFixstd = mean(LFixstd);
+LFVRatioMean = mean(LFVRatioMean);
+LFVstd = mean(LFVstd);
+
+figure(7);
+bar([[SFixRatioMean; MFixRatioMean; LFixRatioMean] [SFVRatioMean; MFVRatioMean; LFVRatioMean]]); hold on;
+legend({'Fixation', 'Free Viewing'}, 'Location', 'north'); hold off

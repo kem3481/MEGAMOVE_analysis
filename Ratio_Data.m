@@ -1,30 +1,30 @@
 %% Reading in Data
 
 % Target, Penalty and COllision Positions
-targetPosFix = Fixend(1:180, 3:5);
+targetPosFix = Fixend(1:179, 7:9);
 targetPosFix = table2array(targetPosFix);
 
-penaltyPosFix = Fixend(1:180, 6:8);
+penaltyPosFix = Fixend(1:179, 10:12);
 penaltyPosFix = table2array(penaltyPosFix);
 
-collisionPosFix = Fixend(1:180, 9:11);
+collisionPosFix = Fixend(1:179, 13:15);
 collisionPosFix = table2array(collisionPosFix);
 
-targetPosFV = FVend(1:180, 3:5);
+targetPosFV = FVend(1:179, 7:9);
 targetPosFV = table2array(targetPosFV);
 
-penaltyPosFV = FVend(1:180, 6:8);
+penaltyPosFV = FVend(1:179, 10:12);
 penaltyPosFV = table2array(penaltyPosFV);
 
-collisionPosFV = FVend(1:180, 9:11);
+collisionPosFV = FVend(1:179, 13:15);
 collisionPosFV = table2array(collisionPosFV);
 
 % Target and Eccentricity lists
-targetTypesFix = Fixend(1:180, 13);
+targetTypesFix = Fixend(1:179, 1);
 targetTypesFix = table2array(targetTypesFix);
 targetTypesFix = cellstr(targetTypesFix);
 targetTypesFix = char(targetTypesFix);
-for i = 1:180
+for i = 1:179
     if targetTypesFix(i) == 'S'
         targettypesFix(i) = 1;
     end
@@ -36,16 +36,16 @@ for i = 1:180
     end
 end
 
-eccentricitiesFix = Fixend(1:180, 15);
+eccentricitiesFix = Fixend(1:179, 17);
 eccentricitiesFix = table2array(eccentricitiesFix);
 eccentricitiesFix = eccentricitiesFix';
 
 
-targetTypesFV = FVend(1:180, 13);
+targetTypesFV = FVend(1:179, 1);
 targetTypesFV = table2array(targetTypesFV);
 targetTypesFV = cellstr(targetTypesFV);
 targetTypesFV = char(targetTypesFV);
-for i = 1:180
+for i = 1:179
     if targetTypesFV(i) == 'S'
         targettypesFV(i) = 1;
     end
@@ -57,12 +57,12 @@ for i = 1:180
     end
 end
 
-eccentricitiesFV = FVend(1:180, 15);
+eccentricitiesFV = FVend(1:179, 17);
 eccentricitiesFV = table2array(eccentricitiesFV);
 eccentricitiesFV = eccentricitiesFV';
 
 % Difference Ratios
-for j = 1:180
+for j = 1:179
 for i = 1:3
    targetCompDiffFix(j, i) = targetPosFix(j, i) - collisionPosFix(j, i);
    penaltyCompDiffFix(j, i) = penaltyPosFix(j, i) - collisionPosFix(j, i);
@@ -73,7 +73,7 @@ end
     differenceRatioFix(j) = targetTotalDiffFix(j)/penaltyTotalDiffFix(j);
 end
 
-for j = 1:180
+for j = 1:179
 for i = 1:3
    targetCompDiffFV(j, i) = targetPosFV(j, i) - collisionPosFV(j, i);
    penaltyCompDiffFV(j, i) = penaltyPosFV(j, i) - collisionPosFV(j, i);
@@ -97,23 +97,23 @@ OverlapFV = [targettypesFV ; differenceRatioFV];
 OverlapFV = OverlapFV';
 OverlapFV = sortrows(OverlapFV, 1);
 
-SmallOverlapAverageFix = mean(OverlapFix(1:65, 2));
-SmallOverlapSDFix = std(OverlapFix(1:65, 2));
+SmallOverlapAverageFix = mean(OverlapFix(1:59, 2));
+SmallOverlapSDFix = std(OverlapFix(1:59, 2));
 
-MediumOverlapAverageFix = mean(OverlapFix(66:122, 2));
-MediumOverlapSDFix = std(OverlapFix(66:122, 2));
+MediumOverlapAverageFix = mean(OverlapFix(60:119, 2));
+MediumOverlapSDFix = std(OverlapFix(60:119, 2));
 
-LargeOverlapAverageFix = mean(OverlapFix(123:180, 2));
-LargeOverlapSDFix = std(OverlapFix(123:180, 2));
+LargeOverlapAverageFix = mean(OverlapFix(120:179, 2));
+LargeOverlapSDFix = std(OverlapFix(120:179, 2));
 
-SmallOverlapAverageFV = mean(OverlapFV(1:65, 2));
-SmallOverlapSDFV = std(OverlapFV(1:65, 2));
+SmallOverlapAverageFV = mean(OverlapFV(1:59, 2));
+SmallOverlapSDFV = std(OverlapFV(1:59, 2));
 
-MediumOverlapAverageFV = mean(OverlapFV(66:122, 2));
-MediumOverlapSDFV = std(OverlapFV(66:122, 2));
+MediumOverlapAverageFV = mean(OverlapFV(60:119, 2));
+MediumOverlapSDFV = std(OverlapFV(60:119, 2));
 
-LargeOverlapAverageFV = mean(OverlapFV(123:180, 2));
-LargeOverlapSDFV = std(OverlapFV(123:180, 2));
+LargeOverlapAverageFV = mean(OverlapFV(120:179, 2));
+LargeOverlapSDFV = std(OverlapFV(120:179, 2));
 
 AveragesFixOverlap = [SmallOverlapAverageFix MediumOverlapAverageFix LargeOverlapAverageFix];
 SDsFixOverlap = [SmallOverlapSDFix MediumOverlapSDFix LargeOverlapSDFix];
@@ -145,23 +145,23 @@ TestFV = [eccentricitiesFV ; differenceRatioFV];
 TestFV = TestFV';
 TestFV = sortrows(TestFV, 1);
 
-SmallEccAverageFix = mean(TestFix(1:65, 2));
-SmallEccSDFix = std(TestFix(1:65, 2));
+SmallEccAverageFix = mean(TestFix(1:59, 2));
+SmallEccSDFix = std(TestFix(1:59, 2));
 
-MediumEccAverageFix = mean(TestFix(66:122, 2));
-MediumEccSDFix = std(TestFix(66:122, 2));
+MediumEccAverageFix = mean(TestFix(60:119, 2));
+MediumEccSDFix = std(TestFix(60:119, 2));
 
-LargeEccAverageFix = mean(TestFix(123:180, 2));
-LargeEccSDFix = std(TestFix(123:180, 2));
+LargeEccAverageFix = mean(TestFix(120:179, 2));
+LargeEccSDFix = std(TestFix(120:179, 2));
 
-SmallEccAverageFV = mean(TestFV(1:65, 2));
-SmallEccSDFV = std(TestFV(1:65, 2));
+SmallEccAverageFV = mean(TestFV(1:59, 2));
+SmallEccSDFV = std(TestFV(1:59, 2));
 
-MediumEccAverageFV = mean(TestFV(66:122, 2));
-MediumEccSDFV = std(TestFV(66:122, 2));
+MediumEccAverageFV = mean(TestFV(60:119, 2));
+MediumEccSDFV = std(TestFV(60:119, 2));
 
-LargeEccAverageFV = mean(TestFV(123:180, 2));
-LargeEccSDFV = std(TestFV(123:180, 2));
+LargeEccAverageFV = mean(TestFV(120:179, 2));
+LargeEccSDFV = std(TestFV(120:179, 2));
 
 AveragesFix = [SmallEccAverageFix MediumEccAverageFix LargeEccAverageFix];
 SDsFix = [SmallEccSDFix MediumEccSDFix LargeEccSDFix];
