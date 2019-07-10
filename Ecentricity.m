@@ -151,4 +151,7 @@ LRadFVRatioMean = sqrt(LRadFVRatioMean(1)^2 + LRadFVRatioMean(2)^2);
 %%
 figure(8);
 bar([[SRadFixRatioMean; MRadFixRatioMean; LRadFixRatioMean] [SRadFVRatioMean; MRadFVRatioMean; LRadFVRatioMean]]); hold on;
-legend({'Fixation', 'Free Viewing'}, 'Location', 'north'); hold off
+legend({'Fixation', 'Free Viewing'}, 'Location', 'north'); 
+ylabel('Difference Ratio (Target/Penalty)');
+xlabel('Eccentricity Size');
+hold off;

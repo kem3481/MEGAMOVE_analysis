@@ -283,6 +283,10 @@ LFixstd = mean(LFixstd);
 LFVRatioMean = mean(LFVRatioMean);
 LFVstd = mean(LFVstd);
 
+%%
 figure(7);
 bar([[SFixRatioMean; MFixRatioMean; LFixRatioMean] [SFVRatioMean; MFVRatioMean; LFVRatioMean]]); hold on;
-legend({'Fixation', 'Free Viewing'}, 'Location', 'north'); hold off
+legend({'Fixation', 'Free Viewing'}, 'Location', 'north'); 
+xlabel('Overlap Type');
+ylabel('Difference Ratio (Target/Penalty)');
+hold off;
