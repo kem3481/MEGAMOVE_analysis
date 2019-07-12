@@ -32,7 +32,12 @@ dataLy = mean(LOLFixlist(:, 1));
 dataLx = mean(LOLFixlist(:, 3));
 
 % Participant average aim point was (-.017, .003) with stndard deviation of
-% .0112 in the x and .0104 in the y
+% .0112 in the x and .0104 in the y FIxation
+
+dataLyFV = mean(LOLFVlist(:, 1));
+dataLxFV = mean(LOLFVlist(:, 3));
+
+% (-.015, 0) FV. std (0.0084, 0.0105)
 %% Gain for all points on medium overlap
 
 for i = 1:111
@@ -66,6 +71,10 @@ dataMx = mean(MOLFixlist(:, 3));
 % Participant average aim point was (-.015, .00005) with standard deviation
 % of .0099 in the x and .0137 in the y
 
+dataMyFV = mean(MOLFVlist(:, 1));
+dataMxFV = mean(MOLFVlist(:, 3));
+
+% (-.0165, 0) std (.0091, .0105)
 %% Gain for all points on small overlap
 
 for i = 1:111
@@ -99,3 +108,7 @@ dataSx = mean(SOLFixlist(:, 3));
 % Participant average aim was (-.014, .0003) with std .0091 in the x and
 % .013 in the y
 
+dataSyFV = mean(SOLFVlist(:, 1));
+dataSxFV = mean(SOLFVlist(:, 3));
+
+% (-.016, 0) std (.0074, .0121)

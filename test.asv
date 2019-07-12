@@ -1,0 +1,38 @@
+%%
+Xtest = 0;
+Ytest = 0;
+Xtest1 = .03;
+
+
+figure (10);
+scatter(Xtest, Ytest, 14000, 'g', 'filled'); hold on;
+scatter(Xtest1, Ytest, 14000, 'r', 'filled');
+scatter(-.02, 0, 50, 'k', 'filled');
+scatter(-.017, 0, 50, 'k', 'd', 'filled');
+xlim([-.04 .07]);
+
+%%
+Xtest = 0;
+Ytest = 0;
+Xtest2 = .033334;
+
+
+figure (11);
+scatter(Xtest, Ytest, 14000, 'g', 'filled'); hold on;
+scatter(Xtest2, Ytest, 14000, 'r', 'filled');
+scatter(-.019, 0, 50, 'k', 'filled');
+scatter(-.015, 0, 50, 'k', 'd', 'filled');
+xlim([-.04 .07]);
+
+%%
+Xtest = 0;
+Ytest = 0;
+Xtest1 = .03;
+
+
+figure (12);
+scatter(Xtest, Ytest, 14000, 'g', 'filled'); hold on;
+scatter(Xtest1, Ytest, 14000, 'r', 'filled');
+scatter(-.02, 0, 50, 'k', 'filled');
+scatter(-.017, 0, 50, 'k', 'd', 'filled');
+xlim([-.04 .07]);

@@ -28,9 +28,16 @@ GainL(41, 21);
 
 % Optimal aim point is (-.02, 0) for spread of .001 for large overlap
 
-dataLx = mean(MOLFixlist(:, 1));
-dataLy = mean(MOLFixlist(:, 3));
+dataLy = mean(LOLFixlist(:, 1));
+dataLx = mean(LOLFixlist(:, 3));
 
+% Participant average aim point was (-.017, .003) with stndard deviation of
+% .0112 in the x and .0104 in the y FIxation
+
+dataLyFV = mean(LOLFVlist(:, 1));
+dataLxFV = mean(LOLFVlist(:, 3));
+
+% (-.015, 0) FV. std (0.0084, 0.0105)
 %% Gain for all points on medium overlap
 
 for i = 1:111
@@ -58,8 +65,8 @@ GainM(41, 22);
 
 % Optimal aim point is (-.019, 0) for spread of .001 for medium overlap
 
-dataMx = mean(MOLFixlist(:, 1));
-dataMy = mean(MOLFixlist(:, 3));
+dataMy = mean(MOLFixlist(:, 1));
+dataMx = mean(MOLFixlist(:, 3));
 
 % Participant average aim point was (-.015, .00005) with standard deviation
 % of .0099 in the x and .0137 in the y
@@ -91,8 +98,8 @@ GainS(41, 24);
 
 % Optimal aim point is (-.017, 0) for spread of .001 in each direction for small overlap
 
-dataSx = mean(SOLFixlist(:, 1));
-dataSy = mean(SOLFixlist(:, 3));
+dataSy = mean(SOLFixlist(:, 1));
+dataSx = mean(SOLFixlist(:, 3));
 
 % Participant average aim was (-.014, .0003) with std .0091 in the x and
 % .013 in the y
